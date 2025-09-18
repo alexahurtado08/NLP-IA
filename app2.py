@@ -42,9 +42,10 @@ if prompt := st.chat_input("Escribe tu mensaje..."):
     # Llamar al modelo con todo el historial
     try:
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.3-70b-versatile",
             messages=st.session_state.messages
-        )
+)
+
 
         respuesta_bot = response.choices[0].message.content
 
